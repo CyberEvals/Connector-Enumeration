@@ -20,5 +20,3 @@ Sends a PUT request with JSON payload.
 
 ### `delete(path: str) -> bool`
 Sends a DELETE request to the API. Returns `True` if successful (HTTP 204).
-
-testuser123:qAWZSexdtrcfvgybhunjimmkjinhubygv
