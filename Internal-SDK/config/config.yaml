@@ -1,0 +1,17 @@
+api:
+  base_url: https://api.example.com         # Base URL of your internal API gateway
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYXBpLXRlc3QiLCJyb2xlIjoiZGV2ZWxvcGVyIiwiZXhwIjoxNzAwMDAwMDAwfQ.sWZcE8GxtnYu5BLbEiRuRj6wYX8eEExY4JxYZ8F2VoM                  # Token used for authentication (can be overridden via env)
+  retries: 3                                # Number of retry attempts for failed requests
+  timeout: 5                                # Timeout (in seconds) for API calls
+  log_level: INFO                           # Logging level: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  verify_ssl: true                          # Whether to verify SSL certificates (set false for local dev)
+
+circuit_breaker:
+  enabled: false                            # Enable circuit breaker logic
+  failure_threshold: 5                      # Number of consecutive failures to open the circuit
+  recovery_timeout: 60                      # Time (in seconds) to wait before retrying after failure
+
+endpoints:
+  status: /status                           # Example API endpoint reference
+  healthcheck: /health                      # Healthcheck route
+  metrics: /metrics   
